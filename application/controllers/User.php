@@ -26,6 +26,8 @@ class User extends CI_Controller
     $this->form_validation->set_rules('nomor_hp', 'Nomor HP', 'required');
     $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
     $this->form_validation->set_rules('password', 'Password', 'required');
+    $this->form_validation->set_rules('konfirmasi_password', 'Konfirmasi Password', 'required|matches[password]');
+
 
 
     if ($this->form_validation->run() == false) {
