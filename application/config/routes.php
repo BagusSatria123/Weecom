@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -54,3 +54,6 @@ $route['404_override'] = 'orang/nyasar';
 
 //translate berguna apabila salah pegetikan contoh _
 $route['translate_uri_dashes'] = TRUE;
+
+$route['register'] = 'user/register';
+$route['register/proses'] = 'user/prosesRegister';
