@@ -30,6 +30,7 @@
                                 'placeholder' => 'Nama Depan'
                             ];
                             echo form_input($data);
+                            echo form_error('nama_depan');
                             ?>
                         </div>
                     </div>
@@ -44,6 +45,8 @@
                                 'placeholder' => 'Nama Belakang'
                             ];
                             echo form_input($data);
+                            echo form_error('nama_belakang');
+
                             ?>
                         </div>
                     </div>
@@ -58,6 +61,8 @@
                                 'placeholder' => 'Email'
                             ];
                             echo form_input($data);
+                            echo form_error('email');
+
                             ?>
                         </div>
                     </div>
@@ -72,6 +77,8 @@
                                 'placeholder' => 'Tanggal Lahir'
                             ];
                             echo form_input($data);
+                            echo form_error('dob');
+
                             ?>
                         </div>
                     </div>
@@ -86,6 +93,8 @@
                                 'placeholder' => 'Alamat'
                             ];
                             echo form_input($data);
+                            echo form_error('alamat');
+
                             ?>
                         </div>
                     </div>
@@ -100,6 +109,8 @@
                                 'placeholder' => 'Masukkan nomor telepon rumah Anda'
                             ];
                             echo form_input($data);
+                            echo form_error('nomor_telepon');
+
                             ?>
                         </div>
                     </div>
@@ -114,19 +125,21 @@
                                 'placeholder' => 'Nomor HP'
                             ];
                             echo form_input($data);
+                            echo form_error('nomor_hp');
+
                             ?>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="jenis__kelamin" class="col-3">Jenis Kelamin</label>
+                        <label for="jenis_kelamin" class="col-3">Jenis Kelamin</label>
                         <div class="col-9">
                             <div class="row">
                                 <div class="col-4">
                                     <label class="radio-inline">
                                         <?php
                                         $data = [
-                                            'name' => 'jenis__kelamin',
-                                            'id' => 'jenis__kelamin'
+                                            'name' => 'jenis_kelamin',
+                                            'id' => 'jenis_kelamin'
                                         ];
                                         echo form_radio($data, 'Wanita');
 
@@ -138,8 +151,8 @@
                                     <label class="radio-inline">
                                         <?php
                                         $data = [
-                                            'name' => 'jenis__kelamin',
-                                            'id' => 'jenis__kelamin'
+                                            'name' => 'jenis_kelamin',
+                                            'id' => 'jenis_kelamin'
                                         ];
                                         echo form_radio($data, 'Pria');
                                         ?>
@@ -147,6 +160,8 @@
                                     </label>
                                 </div>
                             </div>
+                            <?php echo form_error('jenis_kelamin'); ?>
+
                         </div>
                     </div>
                     <div class="form-group row">
@@ -160,6 +175,7 @@
                                 'placeholder' => 'Password'
                             ];
                             echo form_password($data);
+                            echo form_error('password');
                             ?>
                         </div>
                     </div>
@@ -171,9 +187,11 @@
                                 'name' => 'konfirmasi_password',
                                 'id' => 'konfirmasi_password',
                                 'class' => 'form-control',
-                                'placeholder' => 'KOnfirmas Password Kamu dulu'
+                                'placeholder' => 'Konfirmasi Password Kamu dulu'
                             ];
                             echo form_password($data);
+                            echo form_error('konfirmasi_password');
+
                             ?>
                         </div>
                     </div>
