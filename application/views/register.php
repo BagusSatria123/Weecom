@@ -27,6 +27,7 @@
                                 'name' => 'nama_depan',
                                 'id' => 'nama_depan',
                                 'class' => 'form-control',
+                                'value' => set_value('nama_depan'),
                                 'placeholder' => 'Nama Depan'
                             ];
                             echo form_input($data);
@@ -42,6 +43,7 @@
                                 'name' => 'nama_belakang',
                                 'id' => 'nama_belakang',
                                 'class' => 'form-control',
+                                'value' => set_value('nama_belakang'),
                                 'placeholder' => 'Nama Belakang'
                             ];
                             echo form_input($data);
@@ -58,6 +60,7 @@
                                 'name' => 'email',
                                 'id' => 'email',
                                 'class' => 'form-control',
+                                'value' => set_value('email'),
                                 'placeholder' => 'Email'
                             ];
                             echo form_input($data);
@@ -74,6 +77,7 @@
                                 'name' => 'dob',
                                 'id' => 'dob',
                                 'class' => 'form-control',
+                                'value' => set_value('dob'),
                                 'placeholder' => 'Tanggal Lahir'
                             ];
                             echo form_input($data);
@@ -90,6 +94,7 @@
                                 'name' => 'alamat',
                                 'id' => 'alamat',
                                 'class' => 'form-control',
+                                'value' => set_value('alamat'),
                                 'placeholder' => 'Alamat'
                             ];
                             echo form_input($data);
@@ -106,6 +111,7 @@
                                 'name' => 'nomor_telepon',
                                 'id' => 'nomor_telepon',
                                 'class' => 'form-control',
+                                'value' => set_value('nomor_telepon'),
                                 'placeholder' => 'Masukkan nomor telepon rumah Anda'
                             ];
                             echo form_input($data);
@@ -122,6 +128,7 @@
                                 'name' => 'nomor_hp',
                                 'id' => 'nomor_hp',
                                 'class' => 'form-control',
+                                'value' => set_value('nomor_hp'),
                                 'placeholder' => 'Nomor HP'
                             ];
                             echo form_input($data);
@@ -139,7 +146,8 @@
                                         <?php
                                         $data = [
                                             'name' => 'jenis_kelamin',
-                                            'id' => 'jenis_kelamin'
+                                            'id' => 'jenis_kelamin',
+                                            'checked' => set_radio('jenis_kelamin', 'Wanita')
                                         ];
                                         echo form_radio($data, 'Wanita');
 
@@ -152,7 +160,8 @@
                                         <?php
                                         $data = [
                                             'name' => 'jenis_kelamin',
-                                            'id' => 'jenis_kelamin'
+                                            'id' => 'jenis_kelamin',
+                                            'checked' => set_radio('jenis_kelamin', 'Pria')
                                         ];
                                         echo form_radio($data, 'Pria');
                                         ?>

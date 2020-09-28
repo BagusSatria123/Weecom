@@ -5,6 +5,7 @@ class User extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+    $this->load->library('Password');
     $this->load->model('User_model');
   }
   public function register()
@@ -20,7 +21,7 @@ class User extends CI_Controller
   {
     $this->form_validation->set_rules('nama_depan', 'Nama Depan', 'required');
     $this->form_validation->set_rules('nama_belakang', 'Nama Belakang', 'required');
-    $this->form_validation->set_rules('email', 'Email', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required|is_unique[karyawan.email]');
     $this->form_validation->set_rules('dob', 'Tanggal Lahir', 'required');
     $this->form_validation->set_rules('alamat', 'Alamat', 'required');
     $this->form_validation->set_rules('nomor_telepon', 'Nomor Telepon', 'required');
@@ -44,7 +45,7 @@ class User extends CI_Controller
         'nomor_telepon'   => $this->input->post('nomor_telepon'),
         'nomor_hp'        => $this->input->post('nomor_hp'),
         'jenis_kelamin'   => $this->input->post('jenis_kelamin'),
-        'password'        => $this->input->post('password'),
+        'password'        => $this->password->hash($this->input->post('password')),
         'id_departemen'   => 1,
         'id_posisi'       => 1,
         'dibuat'          => date('Y-m-d H:i:s'),
@@ -52,6 +53,11 @@ class User extends CI_Controller
         'status'          => 'interview'
       ];
       $this->User_model->create($dataRegister);
+      redirect('login');
     }
+  }
+  public function login()
+  {
+    echo "Ini adalah halaman login";
   }
 }
