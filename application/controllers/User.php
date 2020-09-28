@@ -58,6 +58,9 @@ class User extends CI_Controller
   }
   public function login()
   {
-    echo "Ini adalah halaman login";
+    $data['title'] = "Register";
+    $this->load->view('template/header', $data);
+    $this->load->view('login', $data);
+    $this->load->view('template/footer', $data);
   }
 }
