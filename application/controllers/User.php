@@ -53,14 +53,30 @@ class User extends CI_Controller
         'status'          => 'interview'
       ];
       $this->User_model->create($dataRegister);
+
+      $dataPesan = ['pesan' => 'Akun anda berhasil dibuat'];
+
+      $this->session->set_flashdata($dataPesan);
+
       redirect('login');
     }
   }
   public function login()
   {
-    $data['title'] = "Register";
+    $data['title'] = "Login";
     $this->load->view('template/header', $data);
     $this->load->view('login', $data);
     $this->load->view('template/footer', $data);
+  }
+
+  public function prosesLogin()
+  {
+    $this->form_validation->set_rules('email', 'Email', 'required');
+    $this->form_validation->set_rules('password', 'Password', 'required|min_length[7]');
+    if ($this->form_validation->run() == false) {
+      $this->login();
+    } else {
+      echo "Login Berhasil";
+    }
   }
 }
