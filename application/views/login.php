@@ -23,7 +23,7 @@
                     <?php endif; ?>
 
                     <?php
-                    echo form_open(base_url('user/prosesLogin'), ['class' => 'form-weecom']);
+                    echo form_open(base_url('login/proses'), ['class' => 'form-weecom']);
                     ?>
 
                     <div class="form-group row">
