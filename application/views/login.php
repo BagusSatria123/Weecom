@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Sistem Perusahaan Weecom</h2>
-            <h3>Pengelolaan karyawan dan digital absensi</h3>
+    <div class="row h-75 align-items-center">
+        <div class="col-md-7">
+            <h2 class="title-register">Sistem Perusahaan Weecom</h2>
+            <h3 class="title-register">Pengelolaan karyawan dan digital absensi</h3>
             <div class="akses-button">
                 <?php
                 $dataAnchor = ['class' => 'btn btn-outline-primary'];
@@ -12,14 +12,14 @@
                 ?>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="card frame-form-weecom">
                 <div class="card-header">Login</div>
                 <div class="card-body">
                     <?php
                     if ($this->session->flashdata('pesan')) :
                     ?>
-                        <div class="alert alert-success"><?php echo $this->session->flashdata('pesan'); ?></div>
+                        <div class="alert <?php echo $this->session->flashdata('alert'); ?>"><?php echo $this->session->flashdata('pesan'); ?></div>
                     <?php endif; ?>
 
                     <?php
