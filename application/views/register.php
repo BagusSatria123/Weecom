@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row h-75 align-items-center">
         <div class="col-md-6">
             <h2>Sistem Perusahaan Weecom</h2>
             <h3>Pengelolaan karyawan dan digital absensi</h3>
@@ -13,12 +13,12 @@
                 ?>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mt-5 mb-5">
             <div class="card frame-form-weecom">
                 <div class="card-header">Daftar Interview</div>
                 <div class="card-body">
                     <?php
-                    echo form_open(base_url('user/prosesRegister'), ['class' => 'form-weecom']);
+                    echo form_open(base_url('register/proses'), ['class' => 'form-weecom']);
                     ?>
                     <div class="form-group row">
                         <label for="nama_depan" class="col-3">Nama Depan</label>
