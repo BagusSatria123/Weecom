@@ -15,8 +15,8 @@ class User extends CI_Controller
     }
     $data['title'] = "Register";
 
-    $this->load->view('template/header', $data);
-    $this->load->view('register', $data);
+    $this->load->view('template/home/header', $data);
+    $this->load->view('pages/register', $data);
   }
 
   public function prosesRegister()
@@ -78,8 +78,8 @@ class User extends CI_Controller
     // print_r($this->session->userdata());
     echo ($this->session->userdata('user_id'));
 
-    $this->load->view('template/header', $data);
-    $this->load->view('login', $data);
+    $this->load->view('template/home/header', $data);
+    $this->load->view('pages/login', $data);
   }
 
   public function prosesLogin()
