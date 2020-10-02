@@ -5,10 +5,10 @@
             <h3 class="title-register">Pengelolaan karyawan dan digital absensi</h3>
             <div class="akses-button">
                 <?php
-                $dataAnchor = ['class' => 'btn btn-outline-primary'];
-
-                echo anchor('user/login', 'LOGIN', $dataAnchor);
-                echo anchor('user/register', 'REGISTER', $dataAnchor);
+                $dataAnchor = ['class' => 'btn btn-outline-primary mr-2 active'];
+                echo anchor('login', 'LOGIN', $dataAnchor);
+                $dataAnchor = ['class' => 'btn btn-outline-primary mr-2'];
+                echo anchor('register', 'REGISTER', $dataAnchor);
                 ?>
             </div>
         </div>

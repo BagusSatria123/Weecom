@@ -14,7 +14,6 @@ class User extends CI_Controller
 
     $this->load->view('template/header', $data);
     $this->load->view('register', $data);
-    $this->load->view('template/footer', $data);
   }
 
   public function prosesRegister()
@@ -72,7 +71,6 @@ class User extends CI_Controller
 
     $this->load->view('template/header', $data);
     $this->load->view('login', $data);
-    $this->load->view('template/footer', $data);
   }
 
   public function prosesLogin()
