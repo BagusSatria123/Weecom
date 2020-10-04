@@ -1,0 +1,28 @@
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+}
+
+ul.menu {
+    list-style: none;
+    padding: 0px;
+}
+
+ul.menu li a {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+ul.menu li a:hover {
+    background: #24303a;
+}
+
+ul.menu li .active>a {
+    background: #3a5a75;
+}

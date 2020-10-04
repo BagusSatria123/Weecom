@@ -13,7 +13,7 @@
     <div id="content">
         <nav class="navbar navbar-expand bg-light">
             <button type="button" id="sidebarCollapse" class="btn btn-outline-dark">
-                <i class="fa fa-align--justify"></i>
+                <i class="fa fa-align-justify"></i>
             </button>
             <a class="navbar-brand logo-dashboard" href="#">WEECOM</a>
         </nav>
