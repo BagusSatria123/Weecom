@@ -35,3 +35,15 @@ ul.menu li .active>a {
 #content.layarPenuh {
     width: 100%;
 }
+
+a.dropdown-sidebar-weecom {
+    position: relative;
+}
+
+a.dropdown-sidebar-weecom::after {
+    position: absolute;
+    display: block;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
