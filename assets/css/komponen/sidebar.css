@@ -4,6 +4,7 @@
     top: 0px;
     left: 0px;
     height: 100vh;
+    transition: all 0.3s;
 }
 
 ul.menu {
@@ -25,4 +26,12 @@ ul.menu li a:hover {
 
 ul.menu li .active>a {
     background: #3a5a75;
+}
+
+#sidebar.tutup {
+    margin-left: -250px;
+}
+
+#content.layarPenuh {
+    width: 100%;
 }

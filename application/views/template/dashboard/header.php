@@ -14,7 +14,11 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css'); ?>">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/halaman/dashboard.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/halaman/dashboard.css?e5235rer2356e3r'); ?>">
+
+
+
+
 </head>
 
 <body>
