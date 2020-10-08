@@ -1,5 +1,5 @@
 <?php
-class Dashboard extends CI_Controller
+class Karyawan extends CI_Controller
 {
 
     public function __construct()
@@ -15,7 +15,7 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Dashboard";
+        $data['title'] = "Karyawan";
 
         $this->load->view('template/dashboard/header', $data);
         $this->load->view('template/dashboard/body', $data);

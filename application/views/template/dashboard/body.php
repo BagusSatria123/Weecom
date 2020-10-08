@@ -1,21 +1,23 @@
 <div class="dashboard">
     <nav id="sidebar" class="bg-dark">
         <ul class="menu">
-            <li><?php echo anchor('dashboard', 'Dashboard'); ?></li>
-            <li><?php echo anchor('dashboard/karyawan', 'Karyawan'); ?></li>
+            <li class="<?php echo menuAktif('dashboard'); ?>"><?php echo anchor('dashboard', 'Dashboard'); ?></li>
+            <li class="<?php echo menuAktif('karyawan'); ?>"><?php echo anchor('karyawan', 'Karyawan'); ?></li>
             <li><?php echo anchor('dashboard/gaji-dan-tunjungan', 'Gaji & Tunjangan'); ?></li>
             <li><?php echo anchor('dashboard/absensi', 'Absensi'); ?></li>
             <li><?php echo anchor('dashboard/posisi', 'Posisi'); ?></li>
             <li><?php echo anchor('dashboard/departemen', 'Departemen'); ?></li>
-            <li><?php echo anchor('logout', 'logout'); ?></li>
+
             <li>
-                <a href="#administrasi" class="dropdown-toggle dropdown-sidebar-weecom" data-toggle="collapse">
+
+                <a href="#administrasi" aria-expanded="false" class="dropdown-toggle dropdown-sidebar-weecom" data-toggle="collapse">
                     Administrasi
                 </a>
-                <ul id="administrasi" class="collapse">
+                <ul id="administrasi" class="collapse menu">
                     <li><?php echo anchor('dashboard/kategori', 'Kategori'); ?></li>
                 </ul>
             </li>
+            <li><?php echo anchor('logout', 'logout'); ?></li>
         </ul>
     </nav>
     <div id="content">
@@ -26,6 +28,8 @@
             <a class="navbar-brand logo-dashboard" href="#">WEECOM</a>
         </nav>
         <div class="container-fluid">
+            <!-- mengambil class yg diakses user kita -->
+            <?php echo $this->router->fetch_class(); ?>
             <!-- Ini adalah konten -->
         </div>
     </div>

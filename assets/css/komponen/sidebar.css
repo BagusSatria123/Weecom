@@ -47,3 +47,12 @@ a.dropdown-sidebar-weecom::after {
     top: 50%;
     transform: translateY(-50%);
 }
+
+a.dropdown-sidebar-weecom[aria-expanded="true"] {
+    background: #111c27;
+}
+
+ul ul li a {
+    background: #111c27;
+    padding-left: 40px !important;
+}
