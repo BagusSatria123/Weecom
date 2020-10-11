@@ -17,8 +17,13 @@ class Karyawan extends CI_Controller
     {
         $data['title'] = "Karyawan";
 
-        $this->load->view('template/dashboard/header', $data);
         $this->load->view('template/dashboard/body', $data);
-        $this->load->view('template/dashboard/footer', $data);
+    }
+
+    public function read()
+    {
+        $data['title'] = "Karyawan - read";
+
+        $this->load->view('template/dashboard/body', $data);
     }
 }
