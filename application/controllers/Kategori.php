@@ -35,4 +35,9 @@ class Kategori extends CI_Controller
         // $this->load->view('pages/kategori/form', $data);
         // $this->load->view('template/dashboard/footer2', $data);
     }
+
+    public function store()
+    {
+        echo "Data akan disimpan disini";
+    }
 }

@@ -70,3 +70,4 @@ $route['dashboard/karyawan'] = 'karyawan/index';
 //kategori
 $route['dashboard/administrasi/kategori'] = 'kategori/index';
 $route['dashboard/administrasi/kategori/bikin'] = 'kategori/create';
+$route['dashboard/administrasi/kategori/simpan'] = 'kategori/store';
